@@ -89,6 +89,8 @@ class Solution {
 
 ////////////////////////////////////////////////////
 
+//           Two Sum
+
 class Solution {
     public int[] twoSum(int[] nums, int target) {
         
@@ -104,5 +106,48 @@ class Solution {
        
         throw new IllegalArgumentException("no match found");
         
+    }
+}
+
+
+/////////////////////////////////////////////////
+
+//         Reverse String
+
+class Solution {
+    public void reverseString(char[] s) {
+        
+        
+        int a_pointer = 0;
+        int b_pointer = s.length-1;
+        
+        while (a_pointer <= b_pointer) {
+            char temp = s[a_pointer];
+            s[a_pointer] = s[b_pointer];
+            s[b_pointer] = temp;
+            
+            a_pointer += 1;
+            b_pointer -= 1;
+        }
+    }
+}
+
+////////////////////////////////////////////////
+
+//////  Find First and Last Position of Element in Sorted Array
+
+class Solution {
+    public int searchValueInUnsortedArray(int[] arr, int val) {
+        if(arr.length == 0){
+            return -1;
+        }
+        
+        for(int i = 0; i < arr.length; i++) {
+            if(arr[i] == val) {
+                return i;
+            }
+        }
+        
+        return -1;
     }
 }
